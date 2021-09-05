@@ -1,12 +1,10 @@
 import java.util.*;
 import java.awt.*;
 
-class Main {
-  public static void main(String[] args) {
-   World world = new World(300, 400);
-   Turtle yertle = new Turtle(habitat);
-  
-    World world = new World(300,300);
+public class Main {
+  public static void main(String[] args)
+  {
+      World world = new World(300,300);
       Turtle yertle = new Turtle(world);
       
       for (int i =0; i < 4; i++)
@@ -18,7 +16,7 @@ class Main {
       yertle.penUp();
           yertle.moveTo(210,250);
       yertle.penDown();
-      
+      yertle.setColor(Color.green);
       for (double i = 0; i < 4; i++)
       {
           if (i%2 == 0 ){
@@ -31,15 +29,25 @@ class Main {
               yertle.turnLeft();
           }
       }
-      
+      yertle.penUp();
+      yertle.moveTo(220,170);
+      yertle.penDown();
+      yertle.setColor(Color.red);
+      for (int i = 0; i < 4; i++)
+      {
+           yertle.turnRight();
+          yertle.forward(19);
+      }
+      yertle.penUp();
+      yertle.moveTo(160,190);
+      yertle.penDown();
+      yertle.setColor(Color.red);
+      for (int i = 0; i < 4; i++)
+      {
+           yertle.forward(19);
+           yertle.turnRight();
+        
+      }
       world.show(true);
-
-   // for (int i = 0; i < 4; i++) {
-   //   yertle.forward();
-   //   yertle.turnRight();
-   // } 
-
-   habitat.show(true);
-   
   }
 }
